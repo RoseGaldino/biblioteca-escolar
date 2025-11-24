@@ -109,9 +109,11 @@ Um usuário pode avaliar um livro apenas uma vez por empréstimo.
 Diagrama Lógico (Relacionamentos)
 
 Representação simplificada:
+
 usuarios (1)---(N) emprestimos (N)---(1) livros (N)---(1) categorias
            \                   
             \---(N) avaliacoes
+
 
 Resumo das Regras de Negócio Implementadas
 
