@@ -16,26 +16,27 @@ Elas representam o fluxo completo do sistema: cadastro → acervo → empréstim
 
 1. Tabela: usuarios
    
-Campo	Tipo	Obrigatório	Descrição
+| Campo         | Tipo         | Obrigatório | Descrição                                        |
+| ------------- | ------------ | ----------- | ------------------------------------------------ |
+| id            | SERIAL PK    | ✔️          | Identificador único do usuário                   |
+| nome          | VARCHAR(150) | ✔️          | Nome completo                                    |
+| tipo          | VARCHAR(30)  | ✔️          | Tipo de usuário (aluno, professor, diretor etc.) |
+| data_cadastro | TIMESTAMP    | ✔️          | Data de criação do cadastro                      |
 
-id	SERIAL PK	✔️	Identificador único do usuário
-nome	VARCHAR(150)	✔️	Nome completo
-tipo	VARCHAR(30)	✔️	Tipo de usuário (aluno, professor, diretor etc.)
-data_cadastro	TIMESTAMP	✔️	Data de criação do cadastro
 
-🌐 Regras importantes:
+Regras importantes:
 
 Os tipos permitidos são: aluno, professor, diretor, vice-diretor, bibliotecario, auxiliar_adm, apoio.
 
 Somente diretor, vice-diretor e bibliotecário podem cadastrar outros usuários.
 
-📚 2. Tabela: categorias
+2. Tabela: categorias
 | Campo | Tipo         | Obrigatório | Descrição                                           |
 | ----- | ------------ | ----------- | --------------------------------------------------- |
 | id    | SERIAL PK    | ✔️          | Identificador da categoria                          |
 | nome  | VARCHAR(100) | ✔️          | Nome da categoria (ex: Romance, Aventura, Didático) |
 
-📖 3. Tabela: livros
+3. Tabela: livros
 | Campo                 | Tipo         | Obrigatório | Descrição              |
 | --------------------- | ------------ | ----------- | ---------------------- |
 | id                    | SERIAL PK    | ✔️          | Identificador do livro |
@@ -46,17 +47,17 @@ Somente diretor, vice-diretor e bibliotecário podem cadastrar outros usuários.
 | quantidade_total      | INT          | ✔️          | Total de exemplares    |
 | quantidade_disponivel | INT          | ✔️          | Exemplares disponíveis |
 
-🔗 Relação:
+Relação:
 
 categoria_id → categorias(id) (N:1)
 
-🧠 Regras:
+Regras:
 
 quantidade_disponivel nunca pode ficar negativa.
 
 Se quantidade_disponivel = 0, o livro não pode ser emprestado.
 
-🔁 4. Tabela: emprestimos
+4. Tabela: emprestimos
 
 | Campo           | Tipo      | Obrigatório | Descrição                        |
 | --------------- | --------- | ----------- | -------------------------------- |
@@ -67,19 +68,19 @@ Se quantidade_disponivel = 0, o livro não pode ser emprestado.
 | data_devolucao  | DATE      | ✔️          | Data limite para devolução       |
 | data_devolvido  | DATE      | ❌           | Data efetiva da devolução        |
 
-🔗 Relações:
+Relações:
 
 usuario_id → usuarios(id)
 
 livro_id → livros(id)
 
-🧠 Regras:
+Regras:
 
 Um usuário só pode ter até 2 empréstimos simultâneos.
 
 A devolução atualiza quantidade_disponivel na tabela livros.
 
-⭐ 5. Tabela: avaliacoes
+5. Tabela: avaliacoes
 | Campo          | Tipo      | Obrigatório | Descrição                     |
 | -------------- | --------- | ----------- | ----------------------------- |
 | id             | SERIAL PK | ✔️          | Identificador da avaliação    |
@@ -89,26 +90,26 @@ A devolução atualiza quantidade_disponivel na tabela livros.
 | comentario     | TEXT      | ❌           | Comentário opcional           |
 | data_avaliacao | TIMESTAMP | ✔️          | Data da avaliação             |
 
-🔗 Relações:
+Relações:
 
 usuario_id → usuarios(id)
 
 livro_id → livros(id)
 
-🧠 Regras:
+Regras:
 
 Nota deve ser entre 1 e 5.
 
 Um usuário pode avaliar um livro apenas uma vez por empréstimo.
 
-🔗 Diagrama Lógico (Relacionamentos)
+Diagrama Lógico (Relacionamentos)
 
 Representação simplificada:
 usuarios (1)---(N) emprestimos (N)---(1) livros (N)---(1) categorias
            \                   
             \---(N) avaliacoes
 
-🎯 Resumo das Regras de Negócio Implementadas
+Resumo das Regras de Negócio Implementadas
 
 🔹 Usuário pode pegar até 2 livros simultaneamente
 
