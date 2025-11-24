@@ -31,12 +31,15 @@ Os tipos permitidos são: aluno, professor, diretor, vice-diretor, bibliotecario
 Somente diretor, vice-diretor e bibliotecário podem cadastrar outros usuários.
 
 2. Tabela: categorias
+
 | Campo | Tipo         | Obrigatório | Descrição                                           |
 | ----- | ------------ | ----------- | --------------------------------------------------- |
 | id    | SERIAL PK    | ✔️          | Identificador da categoria                          |
 | nome  | VARCHAR(100) | ✔️          | Nome da categoria (ex: Romance, Aventura, Didático) |
 
+
 3. Tabela: livros
+
 | Campo                 | Tipo         | Obrigatório | Descrição              |
 | --------------------- | ------------ | ----------- | ---------------------- |
 | id                    | SERIAL PK    | ✔️          | Identificador do livro |
@@ -46,6 +49,7 @@ Somente diretor, vice-diretor e bibliotecário podem cadastrar outros usuários.
 | categoria_id          | INT FK       | ✔️          | Categoria do livro     |
 | quantidade_total      | INT          | ✔️          | Total de exemplares    |
 | quantidade_disponivel | INT          | ✔️          | Exemplares disponíveis |
+
 
 Relação:
 
