@@ -4,6 +4,7 @@ Este documento descreve o passo a passo completo do desenvolvimento do sistema.
 Ele serve como um mapa para organizar o projeto e acompanhar a evolução.
 
 ✅ 1. Planejamento Inicial
+
 ✔ Definição do objetivo do sistema
 
 Fornecer acesso digital ao acervo da biblioteca escolar e permitir empréstimos.
