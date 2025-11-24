@@ -2,7 +2,7 @@
 
 Este documento descreve detalhadamente todas as tabelas do banco biblioteca_escolar, seus campos, relacionamentos e regras principais.
 
-🧩 Visão Geral do Banco de Dados
+**Visão Geral do Banco de Dados**
 
 O sistema é composto por cinco entidades principais:
 
@@ -14,7 +14,7 @@ avaliacoes
 
 Elas representam o fluxo completo do sistema: cadastro → acervo → empréstimo → avaliação.
 
-🧱 1. Tabela: usuarios
+1. Tabela: usuarios
 Campo	Tipo	Obrigatório	Descrição
 id	SERIAL PK	✔️	Identificador único do usuário
 nome	VARCHAR(150)	✔️	Nome completo
