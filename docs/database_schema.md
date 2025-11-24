@@ -85,14 +85,16 @@ Um usuário só pode ter até 2 empréstimos simultâneos.
 A devolução atualiza quantidade_disponivel na tabela livros.
 
 5. Tabela: avaliacoes
-| Campo          | Tipo      | Obrigatório | Descrição                     |
-| -------------- | --------- | ----------- | ----------------------------- |
-| id             | SERIAL PK | ✔️          | Identificador da avaliação    |
-| usuario_id     | INT FK    | ✔️          | Usuário que avaliou           |
-| livro_id       | INT FK    | ✔️          | Livro que recebeu a avaliação |
-| nota           | INT       | ✔️          | Nota entre 1 e 5              |
-| comentario     | TEXT      | ❌          | Comentário opcional           |
-| data_avaliacao | TIMESTAMP | ✔️          | Data da avaliação             |
+
+| Campo          | Tipo      | Obrigatório | Descrição                      |
+|----------------|-----------|-------------|--------------------------------|
+| id             | SERIAL PK | ✔           | Identificador da avaliação     |
+| usuario_id     | INT FK    | ✔           | Usuário que avaliou            |
+| livro_id       | INT FK    | ✔           | Livro que recebeu a avaliação  |
+| nota           | INT       | ✔           | Nota entre 1 e 5               |
+| comentario     | TEXT      | ✖           | Comentário opcional            |
+| data_avaliacao | TIMESTAMP | ✔           | Data da avaliação              |
+
 
 Relações:
 
