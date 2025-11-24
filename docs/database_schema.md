@@ -1,4 +1,4 @@
-🗂️ Database Schema – Sistema de Biblioteca Escolar
+**Database Schema – Sistema de Biblioteca Escolar**
 
 Este documento descreve detalhadamente todas as tabelas do banco biblioteca_escolar, seus campos, relacionamentos e regras principais.
 
@@ -7,13 +7,9 @@ Este documento descreve detalhadamente todas as tabelas do banco biblioteca_esco
 O sistema é composto por cinco entidades principais:
 
 usuarios
-
 categorias
-
 livros
-
 emprestimos
-
 avaliacoes
 
 Elas representam o fluxo completo do sistema: cadastro → acervo → empréstimo → avaliação.
@@ -101,7 +97,7 @@ livro_id → livros(id)
 
 Nota deve ser entre 1 e 5.
 
-Um usuário pode avaliar um livro apenas uma vez por empréstimo (se você quiser posso criar essa regra depois).
+Um usuário pode avaliar um livro apenas uma vez por empréstimo.
 
 🔗 Diagrama Lógico (Relacionamentos)
 
