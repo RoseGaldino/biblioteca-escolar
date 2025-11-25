@@ -1,9 +1,9 @@
-📚 Sistema de Biblioteca Escolar
+**Sistema de Biblioteca Escolar**
 
 Sistema web para gerenciamento do acervo da biblioteca da escola.
 Permite que alunos e funcionários consultem livros disponíveis e realizem empréstimos.
 
-📌 Status do Projeto
+**Status do Projeto**
 
 ✔️ Modelagem do banco de dados
 
@@ -11,23 +11,23 @@ Permite que alunos e funcionários consultem livros disponíveis e realizem empr
 
 ✔️ Tabelas criadas
 
-⏳ API
+ API
 
-⏳ Site (frontend)
+ Site (frontend)
 
-⏳ Login/autenticação
+ Login/autenticação
 
-⏳ Tela de catálogo de livros
+ Tela de catálogo de livros
 
-🗂️ Tecnologias
+**Tecnologias**
 
 PostgreSQL
 
 Python para API
 
-(Futuro) HTML/CSS/JS ou React para o site
+HTML/CSS/JS ou React para o site
 
-🧩 Estrutura do Banco de Dados
+**Estrutura do Banco de Dados**
 
 Tabelas implementadas:
 
@@ -41,7 +41,7 @@ emprestimos
 
 avaliacoes
 
-🚀 Próximos Passos
+**Próximos Passos**
 
 Criar API para listar livros, registrar empréstimos e gerenciar usuários
 
@@ -53,10 +53,10 @@ Criar tela de acervo
 
 Criar tela de empréstimos
 
-🗄️ Scripts do Banco
+**Scripts do Banco**
 
 Os scripts SQL para criação das tabelas estão na pasta /sql deste repositório.
 
-📖 Objetivo
+**Objetivo**
 
 Modernizar o acervo da escola, oferecendo acesso digital às obras e gerenciamento de empréstimos para alunos e funcionários.
