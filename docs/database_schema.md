@@ -112,9 +112,10 @@ Diagrama Lógico (Relacionamentos)
 
 Representação simplificada:
 
-usuarios (1)---(N) emprestimos (N)---(1) livros (N)---(1) categorias
-           \                   
-            \---(N) avaliacoes
+usuarios (1) --- (N) emprestimos (N) --- (1) livros (N) --- (1) categorias
+                                             |
+                                             └--- (N) avaliacoes
+
 
 
 Resumo das Regras de Negócio Implementadas
